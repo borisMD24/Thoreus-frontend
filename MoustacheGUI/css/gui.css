@@ -1,0 +1,79 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.bricks-container{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20vw;
+  background-color: #bdc3c7;
+  border-left: solid 1px black;
+}
+
+.width{
+  width: 100%;
+}
+.title{
+  margin: auto 0;
+  font-size: 2em;
+}
+
+#bricks-title{
+  text-align: center;
+}
+
+
+.resise-W{
+  height: 100%;
+  width: 4px;
+  opacity: 0;
+  background-color: black;
+  position: absolute;
+  top : 0;
+  left: -2px;
+  cursor: col-resize;
+  transition-duration: opacity 0.3s;
+}
+
+p.resise-W:hover{
+  opacity: 30%;
+}
+
+.scene{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../ressources/sceneBG.png");
+  background-repeat: repeat;
+  background-size: 2em;
+}
+
+.block{
+  width: 16em;
+  height: 8em;
+  background-color: red;
+  position: absolute;
+  top: 197px;
+  left: 181px;
+  cursor: crosshair;
+  border-radius: 2em;
+  padding: 1em;
+  font-weight: bold;
+}
+
+.switchLed{
+  background-color: blue;
+}
+
+.transparent{
+  width: 16em;
+  height: 8em;
+  background-color: purple;
+  opacity: 50%;
+  position: absolute;
+  z-index: 5;
+}

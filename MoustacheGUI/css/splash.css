@@ -1,0 +1,173 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.head-container{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head{
+  margin : 0 auto;
+  width: 80vw;
+  height: 80vh;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+  grid-template-rows: 30% 20% 20% 30%;
+  grid-template-areas:
+  "conf      contact    contact    contact"
+  "conf      vid      vid      more"
+  "conf      vid      vid      more"
+  "tuto tuto tuto more"
+  ;
+}
+
+.arrow-container{
+  width: 100%;
+  text-align: center;
+}
+.arrow{
+  margin: 0 auto;
+	width: 0;
+	height: 0;
+	border: 73px solid transparent;
+	border-top-color: black;
+	border-bottom: 0;
+}
+
+.conf{
+  grid-area: conf;
+  border-right: white solid;
+}
+.tuto{
+  grid-area: tuto;
+  border-top:  white solid;
+}
+
+.more{
+
+  grid-area: more;
+  border-left:  white solid;
+}
+
+.contact{
+  border-bottom:  white solid;
+  grid-area: contact;
+}
+
+.vid{
+  grid-area: vid;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conf, .tuto, .more, .contact{
+  background-color: black;
+  color: #3d3d3d;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.tuto, .contact{
+display: grid;
+grid-template-columns: 70% 30%;
+grid-template-areas: "text label";
+}
+
+.head-label{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  opacity: 0;
+  transition-duration: 0.5s;
+  grid-area: label;
+  background-color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+
+.tuto:hover .head-label, .contact:hover .head-label{
+  opacity: 1;
+}
+
+.head-text{
+  grid-area: text;
+  background-color: inherit;
+  padding:  1em;
+  padding-left: 2em;
+}
+
+.tuto .title, .contact .title{
+  margin-left: 1em;
+}
+.tuto:hover .title, .contact:hover .title{
+  margin-left: 2em;
+}
+.conf, .more{
+  padding:  1em;
+  padding-top: 2em;
+}
+
+.conf .title, .more .title{
+  margin-left: 0.5em;
+}
+.conf:hover .title, .more:hover .title{
+  margin-left: 1em;
+}
+
+.title{
+  font-size: 2em;
+  color: white;
+  display: block;
+  transition-duration: 0.5s;
+  margin-bottom: 1em;
+}
+
+.conf:hover, .tuto:hover, .more:hover, .contact:hover{
+  color: white;
+  background-color: #2d3436;
+}
+
+.bgvvid{
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    transform-origin: bottom left;
+}
+
+.splash{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+}
+
+.splash .title{
+  color: white;
+  font-weight: bold;
+}

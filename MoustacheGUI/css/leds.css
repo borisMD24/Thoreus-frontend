@@ -1,0 +1,17 @@
+.stop{
+  height: 5em;
+  width: 30em;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.led{
+  height: 0.5em;
+  width: 0.5em;
+  display: block;
+  background-color: red;
+  opacity: 50%;
+  margin: auto;
+}
